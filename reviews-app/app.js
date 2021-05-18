@@ -49,12 +49,18 @@ function showPerson(person){
 }
 
 nextBtn.addEventListener('click', function(){
-    current++;
+     current++;
+     if(current > reviews.length-1){
+        current = 0;
+    }
     showPerson(current);
 });
 
 prevBtn.addEventListener('click', function(){
     current--;
+    if(current < 0){
+        current = reviews.length - 1;
+    }
     showPerson(current);
 });
 

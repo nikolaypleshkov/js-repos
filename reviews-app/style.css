@@ -231,15 +231,18 @@ main {
 }
 #author {
   margin-bottom: 0.25rem;
+  transition: 0.5s ease;
 }
 #job {
   margin-bottom: 0.5rem;
   text-transform: uppercase;
   color: var(--clr-primary-5);
   font-size: 0.85rem;
+  transition:
 }
 #info {
   margin-bottom: 0.75rem;
+  transition: 0.5s ease-in;
 }
 .prev-btn,
 .next-btn {
