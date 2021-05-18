@@ -36,11 +36,11 @@ let current = 0;
 window.addEventListener('DOMContentLoaded', function(){
     console.log("loaded");
 
-    showPerson(current);
+    showPerson();
     
 });
 
-function showPerson(person){
+function showPerson(){
     const item = reviews[current];
     img.src = item.img;
     author.textContent = item.name;
@@ -71,7 +71,7 @@ function getRandomPerson(){
 randomBtn.addEventListener('click', function(){
     console.log(getRandomPerson());
     current = getRandomPerson();
-    showPerson(current);
+    showPerson();
 });
 
 
