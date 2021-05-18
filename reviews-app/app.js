@@ -18,7 +18,7 @@ const reviews = [
         name: "peter jones",
         job: "intern",
         img: "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg",
-        text: "I can't even use Case Statement without searching in stackoverflow",
+        text: "I can't even use Switch Statement without searching in stackoverflow",
     },
 ];
 
