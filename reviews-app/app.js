@@ -3,7 +3,7 @@ const reviews = [
         id: 1,
         name: "susan smith",
         job: "web developer: ",
-        img: "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883334/person-1_rfzshl.jpg",
+        img: "./person-1.jpeg",
         text: "I'm web developer. I'm noob. I can only code vanilla javascript. All my friends are using React.js and Angular.",
     },
     {
@@ -35,6 +35,39 @@ let current = 0;
 
 window.addEventListener('DOMContentLoaded', function(){
     console.log("loaded");
+
+    showPerson(current);
+    
 });
+
+function showPerson(person){
+    const item = reviews[current];
+    img.src = item.img;
+    author.textContent = item.name;
+    job.textContent = item.job;
+    info.textContent = item.text;
+}
+
+nextBtn.addEventListener('click', function(){
+    current++;
+    showPerson(current);
+});
+
+prevBtn.addEventListener('click', function(){
+    current--;
+    showPerson(current);
+});
+
+function getRandomPerson(){
+    return Math.floor(Math.random() * reviews.length);
+}
+
+randomBtn.addEventListener('click', function(){
+    console.log(getRandomPerson());
+    current = getRandomPerson();
+    showPerson(current);
+});
+
+
 
 
