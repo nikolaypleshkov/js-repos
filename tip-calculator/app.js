@@ -20,9 +20,6 @@ calculate.addEventListener('click', function(){
     var totalEach = (bill * service) / people;
     totalEach = totalEach.toFixed(2);
 
-   
     tip.innerHTML = totalEach;
-    console.log()
- 
 });
 
