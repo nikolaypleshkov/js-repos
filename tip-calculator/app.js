@@ -1,11 +1,11 @@
-var people = document.getElementById('peopleamt').value;
+
 const calculate = document.getElementById('calculate');
 var tip = document.getElementById('tip');
 
 calculate.addEventListener('click', function(){
     var bill = document.getElementById('billamt').value;
     var service = document.getElementById('serviceQual').value;
-
+    var people = document.getElementById('peopleamt').value;
     if(bill === " " || service == 0  || people === " "){
         alert("Please fill the fields!");
         return;
@@ -22,6 +22,7 @@ calculate.addEventListener('click', function(){
 
    
     tip.innerHTML = totalEach;
-    console.log("works");
+    console.log()
+ 
 });
 
