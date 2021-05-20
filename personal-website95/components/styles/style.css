@@ -1,5 +1,6 @@
 #draggable-elem {
     position: absolute;
+    height: 800px;
     z-index: 9;
   }
   
@@ -38,4 +39,12 @@
   .dropdown-link:hover{
       background-color: #fff;
       transition: 0.4s ease;
+  }
+
+  .about{
+      display: none;
+  }
+  .card{
+      max-width: 70% ;
+      height: 50vh;
   }
