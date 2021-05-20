@@ -1,0 +1,41 @@
+#draggable-elem {
+    position: absolute;
+    z-index: 9;
+  }
+  
+  #drag {
+    cursor: pointer;
+  }
+
+.display-none{
+    display: none;
+}
+.display-block{
+    display: block;
+}
+#dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+    border-width: 3px;
+    border-style: outset; 
+    border-color: #f3e8e8
+  }
+  
+  #dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  #dropdown-content a:hover{
+      text-decoration: underline;
+      color: blue;
+  }
+  .dropdown-link:hover{
+      background-color: #fff;
+      transition: 0.4s ease;
+  }

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal95</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="../windows-95-ui-kit/css/pixel.css">
+<link rel="stylesheet" href="./styles/style.css">
+</head>
+<body style="background-color: #00807F;">
+    <nav
+    class="navbar navbar-expand-lg navbar-dark justify-content-between mb-3">
+    <ul class="navbar-nav navbar-nav-hover flex-row align-items-center">
+        <li class="nav-item">
+            <a href="#" class="nav-link" role="button" id="start">
+                <span class="nav-link-inner-text"><img class="window-icon" draggable="false" src="https://microsoft.com/favicon.ico" width="12px" height="12px"> Start</span>
+            </a>
+            <div id="dropdown-content" class="bg-primary">
+                <a href="#" class="dropdown-link"> <img src="./icons/artage-io-48175_1621507910.ico"  width="20px" height="20px" alt="">&nbsp;About</a>
+                <a href="#" class="dropdown-link"> <img src="./icons/artage-io-48134_1621508333.ico"  width="20px" height="20px" alt="">&nbsp;Skills</a>
+                <a href="#" class="dropdown-link"> <img src="./icons/artage-io-48123_1621508251.ico"  width="20px" height="20px" alt="">&nbsp;Projects</a>
+              </div>
+        </li>
+        
+    </ul>
+    <div class="time text-center">
+        <span class=" text-uppercase">1:47 PM</span>
+    </div>
+</nav>
+
+<div class="col-12 col-lg-6 mb-4 mb-lg-0" id="draggable-elem">
+    <div class="card card-tertiary" id="drag">
+        <div class="card-header">
+            <span class="icon icon-xs w95-folder"></span>
+            <span class="ml-4" id="title">System specification</span>
+        </div>
+        <div class="card-body">
+            <p class="card-text">The minimum system requirements called for
+                a 386DX processor, 4MB
+                of RAM, and a 120MB hard drive.</p>
+            <div class="d-flex mt-3" >
+                <button class="btn btn-sm mr-2 btn-primary border-dark"
+                    type="button"><span class="btn-text">OK</span></button>
+                <button class="btn btn-sm btn-primary" type="submit" id="close">
+                    <spanclass="btn-text">Cancel</span></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="./script/drag.js"></script>
+<script src="./script/button-events.js"></script>
+</body>
+</html>
