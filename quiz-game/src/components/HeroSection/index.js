@@ -1,5 +1,4 @@
 import React from 'react'
-import TypeButton from '../Buttons'
 import Modal from '../Modal'
 
 function Hero() {
