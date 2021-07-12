@@ -15,16 +15,7 @@ import { quizData } from '../Quiz/data';
 
 
 function Modal(){
-    const [count, setCount] = useState(0);
-    
-    useEffect(() => {
-        if(count == 10){
-            alert('opa');
-        }
-        else{
-            console.log(count);
-        } 
-    });
+
 
     return (
         <Wrapper>
@@ -88,9 +79,9 @@ function Modal(){
                     <br />
                     </QuizBox>
 
-                    <p>You Clicked {count} times</p>
+                    <p></p>
                 
-                    <button onClick={() => setCount(count+1)} />
+                    <TypeButton />
                     
                 </ModalWindow>
             </Container>
