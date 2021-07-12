@@ -24,7 +24,7 @@ function Modal(){
                 
                     <QuizBox>
                     <QuestionContainer>
-                     <Question>{quizData[0].number}: {quizData[0].question}</Question>
+                     <Question>{quizData[0].number}:&nbsp;&nbsp;{quizData[0].question}</Question>
                     </QuestionContainer>
                     <AnswerContainer>
                      <RadioBtn type="radio"/> <Answer >{quizData[0].answers.a}</Answer>
@@ -40,6 +40,43 @@ function Modal(){
                     <br />
                     </QuizBox>
                     <br />
+
+                    <QuizBox>
+                    <QuestionContainer>
+                     <Question>{quizData[1].number}:&nbsp;&nbsp;{quizData[1].question}</Question>
+                    </QuestionContainer>
+                    <AnswerContainer>
+                     <RadioBtn type="radio"/> <Answer >{quizData[1].answers.a}</Answer>
+                    </AnswerContainer>
+                    <br />
+                    <AnswerContainer>
+                     <RadioBtn type="radio"/> <Answer >{quizData[1].answers.b}</Answer>
+                    </AnswerContainer>
+                    <br />
+                    <AnswerContainer>
+                     <RadioBtn type="radio"/> <Answer >{quizData[1].answers.c}</Answer>
+                    </AnswerContainer>
+                    <br />
+                    </QuizBox>
+                    <br />
+
+                    <QuizBox>
+                    <QuestionContainer>
+                     <Question>{quizData[2].number}:&nbsp;&nbsp;{quizData[2].question}</Question>
+                    </QuestionContainer>
+                    <AnswerContainer>
+                     <RadioBtn type="radio"/> <Answer >{quizData[2].answers.a}</Answer>
+                    </AnswerContainer>
+                    <br />
+                    <AnswerContainer>
+                     <RadioBtn type="radio"/> <Answer >{quizData[2].answers.b}</Answer>
+                    </AnswerContainer>
+                    <br />
+                    <AnswerContainer>
+                     <RadioBtn type="radio"/> <Answer >{quizData[2].answers.c}</Answer>
+                    </AnswerContainer>
+                    <br />
+                    </QuizBox>
                 
                     <TypeButton />
                     
