@@ -17,11 +17,11 @@ export const Container = styled.div`
   left: 50%;
   z-index: 100;
   transition: all 0.6s ease;
-
 `
 
 export const ModalWindow = styled.div`
   background: rgba(255,55,95,0.2);
+  
   width: 420px;
   height: 490px;
   border-radius: 0.5rem;
@@ -42,6 +42,8 @@ export const QuestionContainer = styled.div`
 `
 export const Question = styled.div`
   color: #fff;
+  position: absolute;
+  margin-left: 15px;
 `
 
 export const RadioBtn = styled.input`
@@ -50,15 +52,15 @@ export const RadioBtn = styled.input`
 
 export const Answer = styled.span`
   font-size: 14px;
-  margin-left: 25px;
+  margin-left: 15px;
   color: #fff;
   
 `
 
 export const AnswerContainer = styled.div`
  position: absolute;
- margin-left: 45px;
- margin-top: 5px;
+ margin-left: 65px;
+ margin-top: 25px;
 
 `
 

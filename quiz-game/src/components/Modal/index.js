@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import TypeButton from '../Buttons'
 import { Wrapper,
          Container,
@@ -15,7 +15,17 @@ import { quizData } from '../Quiz/data';
 
 
 function Modal(){
-    console.log();
+    const [count, setCount] = useState(0);
+    
+    useEffect(() => {
+        if(count == 10){
+            alert('opa');
+        }
+        else{
+            console.log(count);
+        } 
+    });
+
     return (
         <Wrapper>
             <Container>
@@ -77,8 +87,10 @@ function Modal(){
                     </AnswerContainer>
                     <br />
                     </QuizBox>
+
+                    <p>You Clicked {count} times</p>
                 
-                    <TypeButton />
+                    <button onClick={() => setCount(count+1)} />
                     
                 </ModalWindow>
             </Container>
