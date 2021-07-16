@@ -33,6 +33,25 @@
     $(function(){
         $('#accordion').accordion();
     });
+
+    $(function(){
+        $('#date').datepicker();
+    });
+
+    $(function(){
+        $('#login').click(function(){
+            var email = $('#email').val();
+            var pass = $('#pass').val();
+
+            if(email == "" || pass == "" && email.length == null || pass.length == null){
+                alert('grshka');
+            }
+            else{
+                document.write('Welcome '+email);
+            }
+            
+        })
+    })
 </script>
 <body>
     
@@ -40,10 +59,13 @@
     <input type="button" value="Submit" id="btn">
     
     <div id="dialog" title="Hello!">
-        <p>texttextetsxtexttextetsxtexttextetsxtexttextetsx.
-            texttextetsxtexttextetsxtexttextetsxtexttextetsxtexttextetsx.
-            texttextetsxtexttextetsxtexttextetsx.
-        </p>
+        <div>
+            Email: <br> <input type="text" name="email" id="email" style="margin-top: 15px;">
+            <br>
+            <br>
+            Password: <input type="password" name="pass" id="pass" style="margin-top: 15px;">
+            <input type="submit" value="Sign in" id="login" style="margin-top: 15px;">
+        </div>
     </div>
 
     <div id="accordion">
@@ -60,5 +82,6 @@
             <p>Text for Section 3</p>
         </div>
     </div>
+    <p>Date: <input name="date" id="date" style="cursor: pointer;" /></p>
 </body>
 </html>
