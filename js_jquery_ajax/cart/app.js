@@ -27,20 +27,17 @@ $('#price2').text(items[1].price);
 console.log(items);
 
 let value = 0;
-let value1 = 0;
-let value2 = 0;
 let itemsPrice = [];
 
 function clicked(){
 $(function(){
         value++;
-        value2++;
         console.log(value);
         let price = parseFloat($('#price').text());
         itemsPrice.push(price);
         console.log(itemsPrice);
         getTotal();
-        updateCart();
+         updateCart();
   
 });
 }
@@ -48,7 +45,6 @@ $(function(){
 function clicked2(){
     $(function(){
             value++;
-            value1++;
             console.log(value);
             let price = parseFloat($('#price2').text());
             itemsPrice.push(price);
@@ -88,17 +84,13 @@ $(function(){
 
 function getItemsIndex(){
     let noItems = '<p style="margin-left: 5%;"><b>No Items</b></p>'
-    items[0].value = value2;
-    items[1].value = value1;
+    items[0].value = value;
     $(function(){
-        if(items[0].value === 0 && items[1].value === 0){
+        if(items[0].value === 0){
             $('#body').after(noItems);
         } 
-       else if(items[0].value != 0 && items[1].value === 0){
+       else{
         $('#body').after('<p style="margin-left: 5%;">Item: <span id="getTitle">'+items[0].nameTag+'</span> || Price: $<span>'+items[0].price+'</span> || Value: <span>'+items[0].value+'</span></p>')
-       }
-       else {
-        $('#body').after('<p style="margin-left: 5%;">Item: <span id="getTitle">'+items[1].nameTag+'</span> || Price: $<span>'+items[1].price+'</span> || Value: <span>'+items[1].value+'</span></p>')
        }
 });
 }
