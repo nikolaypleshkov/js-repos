@@ -1,33 +1,52 @@
-/*
-var arr;
-arr = [10,4,5,6,7,8,1];
-
-document.write('Arrays:<br>');
-
-for(let i = 0; i < arr.length; i++){
-    document.write('#'+i+": "+arr[i]+"<br>");
-}
-
-document.write('Index: 1 -- > ' + arr[0]);
-
-document.write('<br>Min element in array at index ');
-arrMin = arr[0];
-indexAt = 0;
-for(let i = 1; i < arr.length; i++){
-    if(arr[i] < arrMin){
-       arrMin = arr[i];
-       indexAt = i;
+class Person{
+    constructor(name, age){
+        this.name = name;
+        this.age = age;
     }
-    
-}
-document.write(indexAt+': '+arrMin);
-*/
-
-var MyLibrary = {};
-MyLibrary.DecodeString = function(){
-    document.write('Test');
 }
 
-var $ = MyLibrary;
+class PersonData extends Person{
+    constructor(name, age, lang, sal){
+        super(name, age);
+        this.lang = lang;
+        this.sal = sal;
+    }
+}
 
-$.DecodeString();
+const person = new PersonData('Nikolay', 20, 'bul', 2500);
+console.log(person);
+
+const callPerson = new Promise((reslove, reject) => {
+    setTimeout(() => {
+        reslove({pers1: person, pers2: new PersonData('Marko', 13, 'bul', 0.0)});
+        reject('No object provide')
+    },1000);
+});
+
+function callStella() {
+    return new Promise((reslove, reject) => {
+        setTimeout(() => {
+            reslove({name: 'Stella', age: 20});
+        },1500);
+    });
+}
+
+const callNewPerson = new Promise((reslove, reject) => {
+    setTimeout(() => {
+        reslove({name: 'Stella', age: 20})
+    },3500);
+});
+
+const pers = callStella();
+
+callPerson.then(data => {
+    console.log(data);
+}).then(callNewPerson.then(data2 => {
+    console.log(data2);
+}))
+.catch(err => {
+    console.log(err);
+})
+
+const newPerson = {name: 'Mario', age: 13};
+console.log(newPerson);
