@@ -20,15 +20,11 @@
 
 <script>
     $(function(){
-        $('#btn').click(function(){
-        document.write('<p>Hello '+$('#name').val() + '</p>');
-        console.log('working');
+        $('#btn').click(function(){  
+          $('#dialog').dialog();
       });
     });
     
-    $(function(){
-        $('#dialog').dialog();
-    });
 
     $(function(){
         $('#accordion').accordion();
@@ -47,7 +43,7 @@
                 alert('grshka');
             }
             else{
-                document.write('Welcome '+email);
+                $('#welcome').text('Welcome '+email);
             }
             
         })
@@ -55,8 +51,7 @@
 </script>
 <body>
     
-    Yourname: <input type="text" name="name" id="name">
-    <input type="button" value="Submit" id="btn">
+    <input type="button" value="Open dialog" id="btn">
     
     <div id="dialog" title="Hello!">
         <div>
@@ -83,5 +78,9 @@
         </div>
     </div>
     <p>Date: <input name="date" id="date" style="cursor: pointer;" /></p>
+
+    <div>
+        <p id="welcome">Welcome</p>
+    </div>
 </body>
 </html>
