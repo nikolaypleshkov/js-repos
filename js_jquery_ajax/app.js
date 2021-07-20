@@ -15,6 +15,9 @@ class PersonData extends Person{
     getName(){
         return this.name;
     }
+    getAge(){
+        return this.age;
+    }
 }
 
 const person = new PersonData('Nikolay', 20, 'bul', 2500);
