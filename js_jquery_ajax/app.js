@@ -43,7 +43,9 @@ callPerson.then(data => {
     console.log(data);
 }).then(callNewPerson.then(data2 => {
     console.log(data2);
-}))
+})).then(callStella().then(data3 => {
+    console.log(data3);
+})
 .catch(err => {
     console.log(err);
 })
