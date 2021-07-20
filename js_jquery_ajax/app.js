@@ -11,6 +11,10 @@ class PersonData extends Person{
         this.lang = lang;
         this.sal = sal;
     }
+
+    static getName(){
+        return this.name;
+    }
 }
 
 const person = new PersonData('Nikolay', 20, 'bul', 2500);
@@ -54,3 +58,5 @@ callStella().then(data3 => {
 
 const newPerson = {name: 'Mario', age: 13};
 console.log(newPerson);
+
+
