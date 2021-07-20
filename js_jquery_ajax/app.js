@@ -18,6 +18,12 @@ class PersonData extends Person{
     getAge(){
         return this.age;
     }
+    getLang(){
+        return this.lang;
+    }
+    getSal(){
+        return this.sal;
+    }
 }
 
 const person = new PersonData('Nikolay', 20, 'bul', 2500);
@@ -64,3 +70,6 @@ console.log(newPerson);
 
 
 console.log(person.getName());
+console.log(person.getAge());
+console.log(person.getLang());
+console.log(person.getSal());
