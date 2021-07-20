@@ -12,7 +12,7 @@ class PersonData extends Person{
         this.sal = sal;
     }
 
-    static getName(){
+    getName(){
         return this.name;
     }
 }
