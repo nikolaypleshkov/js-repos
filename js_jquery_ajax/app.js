@@ -60,3 +60,4 @@ const newPerson = {name: 'Mario', age: 13};
 console.log(newPerson);
 
 
+console.log(person.getName());
