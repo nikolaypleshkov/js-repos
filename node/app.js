@@ -2,7 +2,8 @@ const log = require('./logger');
 const path = require('path');
 const os = require('os');
 const fs = require('fs');
-
+const EventEmitter = require('events');
+const emitter = new EventEmitter();
 //log('opa')
 
 //Path Module
@@ -25,7 +26,14 @@ const files = fs.readdirSync('./');
 
 console.log(files);
 
-fs.readdir('$', function(reject, reslove) {
+fs.readdir('./', function(reject, reslove) {
     if(reject) console.log('Error',reject);
     else console.log('Result',reslove);    
 });
+
+emitter.on('messageLogged', function() {
+    console.log('Listener called');
+})
+
+
+emitter.emit('messageLogged');
