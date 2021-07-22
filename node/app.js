@@ -11,8 +11,7 @@ var freeMemory = os.freemem();
 console.log(pathObj);
 console.log('Information about each logical CPU core');
 console.log(cpu);
-console.log('Total Memory');
-console.log(totalMemory);
-console.log('Free Memory');
-console.log(freeMemory);
 
+//ES6
+console.log(`Total Memory: ${totalMemory}`);
+console.log(`Total Memory: ${freeMemory}`);
