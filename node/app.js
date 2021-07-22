@@ -1,3 +1,11 @@
 const log = require('./logger');
-log('opa')
+const path = require('path');
+
+//log('opa')
+
+//Path Module
+var pathObj = path.parse(__filename);
+
+console.log(pathObj);
+
 
